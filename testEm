@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# script to see how many tests passed
+
+# note: no code to set script to error out, since the cmp
+# command may return a status of 1 and we want to use that
+# return value
+
+# directories
+testInputDir="./testInput"
+testOutputDir="./testOutput"
+correctOutputDir="./correctOutput"
+
+# array to store the subdirectories
+testDirs=( $(ls $testInputDir) )
+
+# remove testOutputDir, if it exists
+rm -f -r $testOutputDir
+
+# make new directory
+mkdir $testOutputDir
+
+# counters for test runs
+numPassed=0
+numFailed=0
+
+# go through each subdirectory of testInputDir
+#################################################
+# write your code here
+################################################
+
+echo "Number of correct tests: $numPassed"
+echo "Number of failed tests: $numFailed"
+
+echo "Finished script"
+
+
